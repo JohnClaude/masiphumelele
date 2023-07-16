@@ -21,24 +21,28 @@ const FooterComponent = ({ children }: any) => {
             </Link>
           </li>
           <li>
-            <Typography
-              as="a"
-              href="#"
-              color="blue-gray"
-              className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
-            >
-              GET INVOLVED
-            </Typography>
+            <Link to="/get-involved">
+              <Typography
+                as="a"
+                href="#"
+                color="blue-gray"
+                className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
+              >
+                GET INVOLVED
+              </Typography>
+            </Link>
           </li>
           <li>
-            <Typography
-              as="a"
-              href="#"
-              color="blue-gray"
-              className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
-            >
-              MEET THE TEAM
-            </Typography>
+            <Link to="/team">
+              <Typography
+                as="a"
+                href="#"
+                color="blue-gray"
+                className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
+              >
+                MEET THE TEAM
+              </Typography>
+            </Link>
           </li>
           <li>
             <Typography

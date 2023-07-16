@@ -12,7 +12,6 @@ const FooterComponent = ({ children }: any) => {
             <Link to="/about">
               <Typography
                 as="a"
-                href="#"
                 color="blue-gray"
                 className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
               >
@@ -24,7 +23,6 @@ const FooterComponent = ({ children }: any) => {
             <Link to="/get-involved">
               <Typography
                 as="a"
-                href="#"
                 color="blue-gray"
                 className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
               >
@@ -36,7 +34,6 @@ const FooterComponent = ({ children }: any) => {
             <Link to="/team">
               <Typography
                 as="a"
-                href="#"
                 color="blue-gray"
                 className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
               >

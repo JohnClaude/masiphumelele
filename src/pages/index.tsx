@@ -294,24 +294,6 @@ const poemList = [
     <Card className="max-w-[24rem] overflow-hidden rounded-none">
       <CardBody>
         <Typography variant="h5" color="blue-gray">
-          Umama by Chumani Sibebosi
-        </Typography>
-        <Typography variant="p" color="gray" className="mt-3 font-normal">
-          <p>
-            Ndibonge bani xa ndingabongi wena <br />
-            Ndithande bani xa ndigathandi wena <br />
-            Ndithembe bani dingathembi wenn a...
-          </p>
-        </Typography>
-      </CardBody>
-      <CardFooter className="flex items-center justify-between border-b-8 border-black">
-        <Typography className="font-normal">Read full story</Typography>
-      </CardFooter>
-    </Card>
-
-    <Card className="max-w-[24rem] overflow-hidden rounded-none">
-      <CardBody>
-        <Typography variant="h5" color="blue-gray">
           My perplexing life by Chumani Sibebosi
         </Typography>
         <Typography variant="p" color="gray" className="mt-3 font-normal">
@@ -353,6 +335,24 @@ const poemList = [
           <p>
             The ones who have been so fiercely rejected. <br />
             Where do they hide and where do they recharge?...
+          </p>
+        </Typography>
+      </CardBody>
+      <CardFooter className="flex items-center justify-between border-b-8 border-black">
+        <Typography className="font-normal">Read full story</Typography>
+      </CardFooter>
+    </Card>
+
+    <Card className="max-w-[24rem] overflow-hidden rounded-none">
+      <CardBody>
+        <Typography variant="h5" color="blue-gray">
+          Umama by Chumani Sibebosi
+        </Typography>
+        <Typography variant="p" color="gray" className="mt-3 font-normal">
+          <p>
+            Ndibonge bani xa ndingabongi wena <br />
+            Ndithande bani xa ndigathandi wena <br />
+            Ndithembe bani dingathembi wenn a...
           </p>
         </Typography>
       </CardBody>

@@ -68,6 +68,12 @@ const SliderComponent = ({ pageTitle, children }: any) => {
         className="w-full object-cover"
         style={{ height: "80vh" }}
       />
+      <StaticImage
+        src="../images/image00021.jpg"
+        alt="image 1"
+        className="w-full object-cover"
+        style={{ height: "80vh" }}
+      />
     </Carousel>
   );
 };

@@ -3,7 +3,7 @@ slug: "ukhanyo-primary-school"
 type: "story"
 title: "Ukhanyo Primary School"
 author: " Zintle Magazi"
-featuredImage: ../images/school.jpg
+featuredImage: ../images/ukhanyo.jpg
 featuredImageAlt: "Image of a class with their teacher"
 photographer: " Chelsea Mahlangu"
 ---

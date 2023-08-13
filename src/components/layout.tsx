@@ -40,16 +40,6 @@ const Layout = ({ pageTitle, children }: any) => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <Link to="/get-involved" className="flex items-center text-base">
-          GET INVOLVED
-        </Link>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
         <Link to="/team" className="flex items-center text-base">
           MEET THE TEAM
         </Link>

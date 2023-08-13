@@ -27,16 +27,6 @@ const FooterComponent = ({ children }: any) => {
               </Link>
             </li>
             <li>
-              <Link to="/get-involved">
-                <Typography
-                  color="blue-gray"
-                  className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
-                >
-                  GET INVOLVED
-                </Typography>
-              </Link>
-            </li>
-            <li>
               <Link to="/team">
                 <Typography
                   color="blue-gray"

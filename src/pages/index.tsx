@@ -17,53 +17,47 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const IndexPage: React.FC<PageProps> = ({ data }: any) => {
   const edges = data.allMarkdownRemark.edges;
 
-  const stories = edges
-    .filter((edge: any) => edge.node.frontmatter.type === "story")
-    .map((edge: any) => {
-      const featuredImg = getImage(
-        edge.node.frontmatter.featuredImage?.childImageSharp?.gatsbyImageData
-      );
-      const blogUrl = `/blog/${edge.node.frontmatter.slug}`; // e.g. `/blog/my-post`
+  const stories = edges.map((edge: any) => {
+    const featuredImg = getImage(
+      edge.node.frontmatter.featuredImage?.childImageSharp?.gatsbyImageData
+    );
+    const blogUrl = `/blog/${edge.node.frontmatter.slug}`; // e.g. `/blog/my-post`
 
-      return (
-        <Card className="max-w-[24rem] overflow-hidden rounded-none">
-          {/* <CardHeader
-            floated={false}
-            shadow={false}
-            color="transparent"
-            className="m-0 rounded-none"
-          >
-            <GatsbyImage
-              image={featuredImg!}
-              alt={edge.node.frontmatter.featuredImageAlt}
-              style={{ height: "250px" }}
-            />
-          </CardHeader> */}
-          <Link to={blogUrl}>
-            <CardBody>
-              <Typography variant="h5" color="blue-gray">
-                {edge.node.frontmatter.title}
-              </Typography>
-              <Typography variant="p" color="gray" className="mt-3 font-normal">
-                {edge.node.excerpt}
-              </Typography>
-            </CardBody>
-            <CardFooter className="flex items-center justify-between border-b-8 border-black">
-              <Typography
-                color="blue-gray"
-                className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
-              >
-                Read full story
-              </Typography>
-            </CardFooter>
-          </Link>
-        </Card>
-      );
-    });
-
-  // const poems = edges
-  //   .filter((edge: any) => edge.node.frontmatter.type === "poem")
-  //   .map((edge: any) => <PostLink key={edge.node.id} post={edge.node} />);
+    return (
+      <Card className="max-w-[24rem] overflow-hidden rounded-none">
+        <CardHeader
+          floated={false}
+          shadow={false}
+          color="transparent"
+          className="m-0 rounded-none"
+        >
+          <GatsbyImage
+            image={featuredImg!}
+            alt={edge.node.frontmatter.featuredImageAlt}
+            style={{ height: "250px" }}
+          />
+        </CardHeader>
+        <Link to={blogUrl}>
+          <CardBody>
+            <Typography variant="h5" color="blue-gray">
+              {edge.node.frontmatter.title}
+            </Typography>
+            <Typography variant="p" color="gray" className="mt-3 font-normal">
+              {edge.node.excerpt}
+            </Typography>
+          </CardBody>
+          <CardFooter className="flex items-center justify-between border-b-8 border-black">
+            <Typography
+              color="blue-gray"
+              className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
+            >
+              Read full story
+            </Typography>
+          </CardFooter>
+        </Link>
+      </Card>
+    );
+  });
 
   return (
     <Layout pageTitle="Home Page">
@@ -88,13 +82,6 @@ const IndexPage: React.FC<PageProps> = ({ data }: any) => {
             {stories}
           </div>
         </div>
-
-        <div className="sm:mx-8 grid grid-cols-3 grid-flow-row justify-center place-items-center gap-y-16 mt-32">
-          <div className="col-span-1 inline-flex row-start-1 col-start-2 justify-center">
-            <h1 className="font-bold text-3xl">POEMS</h1>
-          </div>
-        </div>
-        {/* <div className="my-5">{poems}</div> */}
       </div>
     </Layout>
   );

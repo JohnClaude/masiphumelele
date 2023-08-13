@@ -1427,7 +1427,10 @@ type MarkdownRemarkFrontmatter = {
   readonly author: Maybe<Scalars['String']>;
   readonly featuredImage: Maybe<File>;
   readonly featuredImageAlt: Maybe<Scalars['String']>;
+  readonly featuredImageTwo: Maybe<File>;
+  readonly featuredImageTwoAlt: Maybe<Scalars['String']>;
   readonly photographer: Maybe<Scalars['String']>;
+  readonly photographerTwo: Maybe<Scalars['String']>;
   readonly slug: Maybe<Scalars['String']>;
   readonly title: Maybe<Scalars['String']>;
   readonly type: Maybe<Scalars['String']>;
@@ -1437,7 +1440,10 @@ type MarkdownRemarkFrontmatterFieldSelector = {
   readonly author: InputMaybe<FieldSelectorEnum>;
   readonly featuredImage: InputMaybe<FileFieldSelector>;
   readonly featuredImageAlt: InputMaybe<FieldSelectorEnum>;
+  readonly featuredImageTwo: InputMaybe<FileFieldSelector>;
+  readonly featuredImageTwoAlt: InputMaybe<FieldSelectorEnum>;
   readonly photographer: InputMaybe<FieldSelectorEnum>;
+  readonly photographerTwo: InputMaybe<FieldSelectorEnum>;
   readonly slug: InputMaybe<FieldSelectorEnum>;
   readonly title: InputMaybe<FieldSelectorEnum>;
   readonly type: InputMaybe<FieldSelectorEnum>;
@@ -1447,7 +1453,10 @@ type MarkdownRemarkFrontmatterFilterInput = {
   readonly author: InputMaybe<StringQueryOperatorInput>;
   readonly featuredImage: InputMaybe<FileFilterInput>;
   readonly featuredImageAlt: InputMaybe<StringQueryOperatorInput>;
+  readonly featuredImageTwo: InputMaybe<FileFilterInput>;
+  readonly featuredImageTwoAlt: InputMaybe<StringQueryOperatorInput>;
   readonly photographer: InputMaybe<StringQueryOperatorInput>;
+  readonly photographerTwo: InputMaybe<StringQueryOperatorInput>;
   readonly slug: InputMaybe<StringQueryOperatorInput>;
   readonly title: InputMaybe<StringQueryOperatorInput>;
   readonly type: InputMaybe<StringQueryOperatorInput>;
@@ -1457,7 +1466,10 @@ type MarkdownRemarkFrontmatterSortInput = {
   readonly author: InputMaybe<SortOrderEnum>;
   readonly featuredImage: InputMaybe<FileSortInput>;
   readonly featuredImageAlt: InputMaybe<SortOrderEnum>;
+  readonly featuredImageTwo: InputMaybe<FileSortInput>;
+  readonly featuredImageTwoAlt: InputMaybe<SortOrderEnum>;
   readonly photographer: InputMaybe<SortOrderEnum>;
+  readonly photographerTwo: InputMaybe<SortOrderEnum>;
   readonly slug: InputMaybe<SortOrderEnum>;
   readonly title: InputMaybe<SortOrderEnum>;
   readonly type: InputMaybe<SortOrderEnum>;

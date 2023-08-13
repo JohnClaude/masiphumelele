@@ -69,7 +69,7 @@ const SliderComponent = ({ pageTitle, children }: any) => {
         style={{ height: "80vh" }}
       />
       <StaticImage
-        src="../images/image00021.jpg"
+        src="../images/mama_africa_restaurant.jpg"
         alt="image 1"
         className="w-full object-cover"
         style={{ height: "80vh" }}

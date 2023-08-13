@@ -12,7 +12,6 @@ import {
   Typography,
   CardFooter,
 } from "@material-tailwind/react";
-import { StaticImage } from "gatsby-plugin-image";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const IndexPage: React.FC<PageProps> = ({ data }: any) => {
@@ -22,46 +21,42 @@ const IndexPage: React.FC<PageProps> = ({ data }: any) => {
     .filter((edge: any) => edge.node.frontmatter.type === "story")
     .map((edge: any) => {
       const featuredImg = getImage(
-        edge.node.featuredImage?.childImageSharp?.gatsbyImageData
+        edge.node.frontmatter.featuredImage?.childImageSharp?.gatsbyImageData
       );
       const blogUrl = `/blog/${edge.node.frontmatter.slug}`; // e.g. `/blog/my-post`
 
       return (
         <Card className="max-w-[24rem] overflow-hidden rounded-none">
-          <CardHeader
+          {/* <CardHeader
             floated={false}
             shadow={false}
             color="transparent"
             className="m-0 rounded-none"
           >
-            <StaticImage
-              src="../images/mother_with_baby.jpg"
-              alt="ui/ux review check"
-            />
             <GatsbyImage
               image={featuredImg!}
               alt={edge.node.frontmatter.featuredImageAlt}
-              style={{ height: "75vh" }}
+              style={{ height: "250px" }}
             />
-          </CardHeader>
-          <CardBody>
-            <Typography variant="h5" color="blue-gray">
-              {edge.node.frontmatter.title}
-            </Typography>
-            <Typography variant="p" color="gray" className="mt-3 font-normal">
-              {edge.node.excerpt}
-            </Typography>
-          </CardBody>
-          <CardFooter className="flex items-center justify-between border-b-8 border-black">
-            <Link to={blogUrl}>
+          </CardHeader> */}
+          <Link to={blogUrl}>
+            <CardBody>
+              <Typography variant="h5" color="blue-gray">
+                {edge.node.frontmatter.title}
+              </Typography>
+              <Typography variant="p" color="gray" className="mt-3 font-normal">
+                {edge.node.excerpt}
+              </Typography>
+            </CardBody>
+            <CardFooter className="flex items-center justify-between border-b-8 border-black">
               <Typography
                 color="blue-gray"
                 className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
               >
                 Read full story
               </Typography>
-            </Link>
-          </CardFooter>
+            </CardFooter>
+          </Link>
         </Card>
       );
     });

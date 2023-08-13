@@ -85,10 +85,11 @@ const AboutPage: React.FC<PageProps> = () => {
       </div>
       <div className="mx-8 mt-8">
         <p>
-          Help us make this dream a reality by donating to our
+          Help us make this dream a reality by donating to our&nbsp;
           <a
             href="https://www.givengain.com/list/basic/U0CP4DZ4ZF2VL9BJ2JJ0UI4QI3CN6FJ9QO4HB0ZZ2QO9EZ0WX4OR2HP1PQ9MQ3ON1ZU2QX4CQ3S/"
             target="_blank"
+            className="underline"
           >
             GivenGain
           </a>

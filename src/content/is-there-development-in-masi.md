@@ -1,5 +1,5 @@
 ---
-slug: "is-there-development-in-masi.md"
+slug: "is-there-development-in-masi"
 type: "story"
 title: "Is there development in Masi?"
 author: "Sphokuhle Raxa"

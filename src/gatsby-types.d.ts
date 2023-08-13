@@ -1632,6 +1632,7 @@ type Query = {
   readonly allFile: FileConnection;
   readonly allImageSharp: ImageSharpConnection;
   readonly allMarkdownRemark: MarkdownRemarkConnection;
+  readonly allRelatedMarkdownRemarks: relatedMarkdownRemarksConnection;
   readonly allSite: SiteConnection;
   readonly allSiteBuildMetadata: SiteBuildMetadataConnection;
   readonly allSiteFunction: SiteFunctionConnection;
@@ -1642,6 +1643,7 @@ type Query = {
   readonly file: Maybe<File>;
   readonly imageSharp: Maybe<ImageSharp>;
   readonly markdownRemark: Maybe<MarkdownRemark>;
+  readonly relatedMarkdownRemarks: Maybe<relatedMarkdownRemarks>;
   readonly site: Maybe<Site>;
   readonly siteBuildMetadata: Maybe<SiteBuildMetadata>;
   readonly siteFunction: Maybe<SiteFunction>;
@@ -1680,6 +1682,14 @@ type Query_allMarkdownRemarkArgs = {
   limit: InputMaybe<Scalars['Int']>;
   skip: InputMaybe<Scalars['Int']>;
   sort: InputMaybe<ReadonlyArray<InputMaybe<MarkdownRemarkSortInput>>>;
+};
+
+
+type Query_allRelatedMarkdownRemarksArgs = {
+  filter: InputMaybe<relatedMarkdownRemarksFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<ReadonlyArray<InputMaybe<relatedMarkdownRemarksSortInput>>>;
 };
 
 
@@ -1846,6 +1856,15 @@ type Query_markdownRemarkArgs = {
   tableOfContents: InputMaybe<StringQueryOperatorInput>;
   timeToRead: InputMaybe<IntQueryOperatorInput>;
   wordCount: InputMaybe<MarkdownWordCountFilterInput>;
+};
+
+
+type Query_relatedMarkdownRemarksArgs = {
+  children: InputMaybe<NodeFilterListInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  posts: InputMaybe<MarkdownRemarkFilterListInput>;
 };
 
 
@@ -3058,6 +3077,131 @@ type TransformOptions = {
 type WebPOptions = {
   readonly quality: InputMaybe<Scalars['Int']>;
 };
+
+type relatedMarkdownRemarks = Node & {
+  readonly children: ReadonlyArray<Node>;
+  readonly id: Scalars['ID'];
+  readonly internal: Internal;
+  readonly parent: Maybe<Node>;
+  readonly posts: Maybe<ReadonlyArray<Maybe<MarkdownRemark>>>;
+};
+
+type relatedMarkdownRemarksConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<relatedMarkdownRemarksEdge>;
+  readonly group: ReadonlyArray<relatedMarkdownRemarksGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<relatedMarkdownRemarks>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type relatedMarkdownRemarksConnection_distinctArgs = {
+  field: relatedMarkdownRemarksFieldSelector;
+};
+
+
+type relatedMarkdownRemarksConnection_groupArgs = {
+  field: relatedMarkdownRemarksFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type relatedMarkdownRemarksConnection_maxArgs = {
+  field: relatedMarkdownRemarksFieldSelector;
+};
+
+
+type relatedMarkdownRemarksConnection_minArgs = {
+  field: relatedMarkdownRemarksFieldSelector;
+};
+
+
+type relatedMarkdownRemarksConnection_sumArgs = {
+  field: relatedMarkdownRemarksFieldSelector;
+};
+
+type relatedMarkdownRemarksEdge = {
+  readonly next: Maybe<relatedMarkdownRemarks>;
+  readonly node: relatedMarkdownRemarks;
+  readonly previous: Maybe<relatedMarkdownRemarks>;
+};
+
+type relatedMarkdownRemarksFieldSelector = {
+  readonly children: InputMaybe<NodeFieldSelector>;
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly parent: InputMaybe<NodeFieldSelector>;
+  readonly posts: InputMaybe<MarkdownRemarkFieldSelector>;
+};
+
+type relatedMarkdownRemarksFilterInput = {
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly posts: InputMaybe<MarkdownRemarkFilterListInput>;
+};
+
+type relatedMarkdownRemarksGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<relatedMarkdownRemarksEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<relatedMarkdownRemarksGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<relatedMarkdownRemarks>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type relatedMarkdownRemarksGroupConnection_distinctArgs = {
+  field: relatedMarkdownRemarksFieldSelector;
+};
+
+
+type relatedMarkdownRemarksGroupConnection_groupArgs = {
+  field: relatedMarkdownRemarksFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type relatedMarkdownRemarksGroupConnection_maxArgs = {
+  field: relatedMarkdownRemarksFieldSelector;
+};
+
+
+type relatedMarkdownRemarksGroupConnection_minArgs = {
+  field: relatedMarkdownRemarksFieldSelector;
+};
+
+
+type relatedMarkdownRemarksGroupConnection_sumArgs = {
+  field: relatedMarkdownRemarksFieldSelector;
+};
+
+type relatedMarkdownRemarksSortInput = {
+  readonly children: InputMaybe<NodeSortInput>;
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly internal: InputMaybe<InternalSortInput>;
+  readonly parent: InputMaybe<NodeSortInput>;
+  readonly posts: InputMaybe<MarkdownRemarkSortInput>;
+};
+
+type BlogPageQueryQueryVariables = Exact<{
+  id: Scalars['String'];
+}>;
+
+
+type BlogPageQueryQuery = { readonly mainPost: { readonly html: string | null, readonly frontmatter: { readonly slug: string | null, readonly title: string | null, readonly author: string | null, readonly featuredImageAlt: string | null, readonly featuredImage: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null } | null } | null, readonly relatedStories: { readonly nodes: ReadonlyArray<{ readonly excerpt: string | null, readonly frontmatter: { readonly slug: string | null, readonly title: string | null } | null }> } };
 
 type GatsbyImageSharpFixedFragment = { readonly base64: string | null, readonly width: number, readonly height: number, readonly src: string, readonly srcSet: string };
 

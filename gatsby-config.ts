@@ -40,6 +40,21 @@ const config: GatsbyConfig = {
         path: `${__dirname}/src/content`,
       },
     },
+    {
+      resolve: "gatsby-remark-related-posts",
+      options: {
+        doc_lang: "en", // optional
+        target_node: "MarkdownRemark", // optional
+        getMarkdown: (node: any) => node.rawMarkdownBody, // optional
+        each_bow_size: 1, // optional
+      },
+    },
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     // trackingId: `ADD YOUR TRACKING ID HERE`,
+    //   },
+    // },
     `gatsby-transformer-remark`,
   ],
 };

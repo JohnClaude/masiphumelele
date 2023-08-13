@@ -1,4 +1,5 @@
 import type { GatsbyConfig } from "gatsby";
+import { resolve } from "path";
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -32,6 +33,14 @@ const config: GatsbyConfig = {
       },
       __key: "pages",
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/src/content`,
+      },
+    },
+    `gatsby-transformer-remark`,
   ],
 };
 

@@ -20,9 +20,9 @@ Living in Greenpoint without drinking water meant the community had to buy water
 
 … to read more visit our
 <a
-            href="https://www.givengain.com/list/basic/U0CP4DZ4ZF2VL9BJ2JJ0UI4QI3CN6FJ9QO4HB0ZZ2QO9EZ0WX4OR2HP1PQ9MQ3ON1ZU2QX4CQ3S/"
+            href="https://www.backabuddy.co.za/champion/project/zintle-magazi-5677817988415912722"
             target="_blank"
           >
-<ins>GivenGain</ins>
+<ins>BackaBuddy</ins>
 </a>
 page and help us publish our book!

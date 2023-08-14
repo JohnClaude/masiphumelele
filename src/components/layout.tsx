@@ -34,7 +34,7 @@ const Layout = ({ pageTitle, children }: any) => {
           ABOUT US
         </Link>
       </Typography>
-      <Typography
+      {/* <Typography
         as="li"
         variant="small"
         color="blue-gray"
@@ -43,7 +43,7 @@ const Layout = ({ pageTitle, children }: any) => {
         <Link to="/team" className="flex items-center text-base">
           MEET THE TEAM
         </Link>
-      </Typography>
+      </Typography> */}
     </ul>
   );
 

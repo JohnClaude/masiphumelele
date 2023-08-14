@@ -26,7 +26,7 @@ const FooterComponent = ({ children }: any) => {
                 </Typography>
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/team">
                 <Typography
                   color="blue-gray"
@@ -35,7 +35,7 @@ const FooterComponent = ({ children }: any) => {
                   MEET THE TEAM
                 </Typography>
               </Link>
-            </li>
+            </li> */}
             <li>
               <Typography
                 href="https://www.instagram.com/the_masi_story/"
